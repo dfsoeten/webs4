@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/wk2010" xmlns:tns="http://www.example.org/wk2010" elementFormDefault="qualified">
+
+    <element name="wk2010" type="tns:wk2010"></element>
+    
+    <complexType name="wk2010">
+    	<sequence>
+    		<element name="group" type="tns:group" maxOccurs="9" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="group">
+    	<sequence>
+    		<element name="match" type="tns:match" maxOccurs="16" minOccurs="1"></element>
+    	</sequence>
+    	<attribute name="nr">
+    		<simpleType>
+    			<restriction base="string">
+    				<pattern value="[A-HX]{1}"></pattern>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="match">
+    	<sequence>
+    		<element name="home" type="tns:team"></element>
+    		<element name="away" type="tns:team"></element>
+    		<element name="date" type="date"></element>
+    		<element name="kickoff" type="time"></element>
+    	</sequence>
+    </complexType>
+
+
+    <complexType name="team">
+    	<sequence>
+    		<element name="score" maxOccurs="1" minOccurs="0">
+    			<simpleType>
+    				<restriction base="int">
+    					<minExclusive value="0"></minExclusive>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    	</sequence>
+    </complexType>
+</schema>

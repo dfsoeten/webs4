@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="jsonConverter.xsl" type="application/xml"?>
+<tns:planning xmlns:tns="http://www.example.org/planning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/planning planning.xsd ">
+  <tns:periode nr="1">
+    <tns:week nr="1">
+      <tns:afspraak>
+        <tns:title>WEBS4 Tentamen</tns:title>
+        <tns:dag>Woensdag</tns:dag>
+        <tns:datum>2019-06-12T11:45:00</tns:datum>
+        <tns:locatie>
+          <tns:gebouw>tns:gebouw</tns:gebouw>
+          <tns:lokaal>tns:lokaal</tns:lokaal>
+        </tns:locatie>
+        <tns:persoon>
+          <tns:naam>tns:naam</tns:naam>
+          <tns:email>tns:email</tns:email>
+        </tns:persoon>
+      </tns:afspraak>
+    </tns:week>
+    <tns:week nr="2">
+      <tns:afspraak>
+        <tns:title>tns:title</tns:title>
+        <tns:dag>tns:dag</tns:dag>
+        <tns:datum>2001-12-31T12:00:00</tns:datum>
+        <tns:locatie>
+          <tns:gebouw>tns:gebouw</tns:gebouw>
+          <tns:lokaal>tns:lokaal</tns:lokaal>
+        </tns:locatie>
+        <tns:persoon>
+          <tns:naam>tns:naam</tns:naam>
+          <tns:email>tns:email</tns:email>
+        </tns:persoon>
+      </tns:afspraak>
+    </tns:week>
+  </tns:periode>
+  <tns:periode nr="2">
+    <tns:week nr="1">
+      <tns:afspraak>
+        <tns:title>tns:title</tns:title>
+        <tns:dag>tns:dag</tns:dag>
+        <tns:datum>2001-12-31T12:00:00</tns:datum>
+        <tns:locatie>
+          <tns:gebouw>tns:gebouw</tns:gebouw>
+          <tns:lokaal>tns:lokaal</tns:lokaal>
+        </tns:locatie>
+        <tns:persoon>
+          <tns:naam>tns:naam</tns:naam>
+          <tns:email>tns:email</tns:email>
+        </tns:persoon>
+      </tns:afspraak>
+    </tns:week>
+  </tns:periode>
+</tns:planning>

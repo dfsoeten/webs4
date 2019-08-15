@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/planning" xmlns:tns="http://www.example.org/planning" elementFormDefault="qualified">
+
+
+    <element name="planning" type="tns:planning"></element>
+    
+    <complexType name="planning">
+    	<sequence>
+    		<element name="periode" type="tns:periode" maxOccurs="4"
+    			minOccurs="0">
+    		</element>
+    	</sequence>
+    </complexType>
+    
+
+    <complexType name="periode">
+    	<sequence>
+    		<element name="week" type="tns:week" maxOccurs="7"
+    			minOccurs="1">
+    		</element>
+    	</sequence>
+    	<attribute name="nr" type="int"></attribute>
+    </complexType>
+    
+    <complexType name="week">
+    	<sequence>
+    		<element name="afspraak" type="tns:afspraak"
+    			maxOccurs="unbounded" minOccurs="1">
+    		</element>
+    	</sequence>
+    	<attribute name="nr" type="int"></attribute>
+    </complexType>
+    
+    <complexType name="afspraak">
+    	<sequence>
+    		<element name="title" type="string"></element>
+    		<element name="dag" type="string"></element>
+    		<element name="datum" type="dateTime"></element>
+    		<element name="locatie" type="tns:locatie"></element>
+    		<element name="persoon" type="tns:persoon" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="locatie">
+    	<sequence>
+    		<element name="gebouw" type="string"></element>
+    		<element name="lokaal" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="persoon">
+    	<sequence>
+    		<element name="naam" type="string"></element>
+    		<element name="email" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>
